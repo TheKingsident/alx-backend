@@ -52,5 +52,5 @@ class Server:
             'data': self.get_page(page, page_size),
             'next_page': next_page,
             'prev_page': page - 1 if page > 1 else None,
-            'total_pages': math.ceil(dataset_range / page_size)      
+            'total_pages': math.ceil(dataset_range / page_size)
         }
