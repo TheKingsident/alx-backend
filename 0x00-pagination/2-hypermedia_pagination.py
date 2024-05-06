@@ -43,7 +43,7 @@ class Server:
             return []
         return self.dataset()[start_index:end_index]
 
-    def get_hyper(self, page: int = 1, page_size: int = 10):
+    def get_hyper(self, page: int = 1, page_size: int = 10) -> dict:
         dataset_range = len(self.dataset())
         next_page = page + 1 if page * page_size < dataset_range else None
         return {
