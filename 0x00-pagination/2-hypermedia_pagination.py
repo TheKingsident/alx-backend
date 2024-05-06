@@ -42,15 +42,15 @@ class Server:
         if start_index >= dataset_range:
             return []
         return self.dataset()[start_index:end_index]
-    
+
     def get_hyper(self, page: int = 1, page_size: int = 10):
-        dataset_range =  len(self.dataset())
+        dataset_range = len(self.dataset())
         next_page = page + 1 if page * page_size < dataset_range else None
         return {
-            'page_size': page_size,
+            'page_size': len(self.get_page(page, page_size)),
             'page': page,
             'data': self.get_page(page, page_size),
             'next_page': next_page,
             'prev_page': page - 1 if page > 1 else None,
-            'total_pages': math.ceil(dataset_range / page_size)       
+            'total_pages': math.ceil(dataset_range / page_size)      
         }
