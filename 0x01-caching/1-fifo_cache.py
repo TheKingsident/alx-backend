@@ -3,7 +3,8 @@
 """
 
 from queue import Queue
-from base_caching import BaseCaching
+BaseCaching = __import__('base_caching').BaseCaching
+
 
 
 class FIFOCache(BaseCaching):
