@@ -6,11 +6,10 @@ from base_caching import BaseCaching
 
 
 class LIFOCache(BaseCaching):
-    """ LIFOCache inherits from BaseCaching
+    """ FIFOCache class
     """
-
     def __init__(self):
-        """ Initiliaze
+        """ Initialize
         """
         super().__init__()
 
@@ -20,7 +19,7 @@ class LIFOCache(BaseCaching):
         if key is None or item is None:
             return
 
-        if len(self.cache_data) >= self.MAX_ITEMS:
+        if len(self.cache_data) >= BaseCaching.MAX_ITEMS:
             last_key = next(reversed(self.cache_data))
             del self.cache_data[last_key]
             print(f"DISCARD: {last_key}")
@@ -30,4 +29,6 @@ class LIFOCache(BaseCaching):
     def get(self, key):
         """ Get an item by key
         """
-        return self.cache_data.get(key)
+        if key is None or key not in self.cache_data:
+            return None
+        return self.cache_data[key]
