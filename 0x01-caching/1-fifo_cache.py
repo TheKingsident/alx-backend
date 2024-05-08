@@ -6,7 +6,6 @@ from queue import Queue
 BaseCaching = __import__('base_caching').BaseCaching
 
 
-
 class FIFOCache(BaseCaching):
     """ FIFOCache class
     """
