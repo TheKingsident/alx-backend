@@ -6,8 +6,10 @@ from base_caching import BaseCaching
 
 
 class LFUCache(BaseCaching):
+    """
+    """
     def __init__(self):
-        """ Initiliaze
+        """ LFUCache class
         """
         super().__init__()
         self.frequency = {}
