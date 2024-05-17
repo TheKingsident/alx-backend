@@ -41,7 +41,7 @@ def get_user():
     """
     user_login = request.args.get('login_as')
     if user_login is not None and user_login.isdigit() and int(user_login) in users:
-        return users[int(user_login)]
+        return users.get(int(user_login))
     return None
 
 

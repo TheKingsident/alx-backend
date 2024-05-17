@@ -8,7 +8,7 @@
 
     <p>
         {% if g.user %}
-            {{ _('logged_in_as')|format(username=g.user['name']) }}
+            {{ _('logged_in_as', username=g.user.name) }}
         {% else %}
             {{ _('not_logged_in') }}
         {% endif %}
