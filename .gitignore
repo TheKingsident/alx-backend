@@ -2,3 +2,10 @@
 0x01-caching/__pycache__/
 0x02-i18n/venv
 
+0x03-queuing_system_in_js/node_modules/
+0x03-queuing_system_in_js/node_modules/.bin/uglifyjs
+0x03-queuing_system_in_js/package.json
+0x03-queuing_system_in_js/package-lock.json
+0x03-queuing_system_in_js/.babelrc
+0x03-queuing_system_in_js/redis-6.0.10/
+0x03-queuing_system_in_js/redis-6.0.10.tar.gz
