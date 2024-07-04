@@ -1,1 +1,0 @@
-This directory contains assignment files for the "0x02. i18n" tasks from ALX.
