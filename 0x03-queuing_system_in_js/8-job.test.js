@@ -96,7 +96,7 @@ describe('createPushNotificationsJobs', () => {
     createPushNotificationsJobs(jobs, queue);
 
     queue.testMode.jobs[0].on('failed', (err) => {
-      expect(consoleSpy.calledWith(`Notification job ${queue.testMode.jobs[0].id} failed: ${err}`)).to.be.true
+      expect(consoleSpy.calledWith(`Notification job ${queue.testMode.jobs[0].id} failed: ${err}`)).to.be.true;
       consoleSpy.restore();
       done();
     });

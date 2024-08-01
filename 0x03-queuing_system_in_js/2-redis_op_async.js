@@ -11,7 +11,7 @@ client.on('error', (err) => {
 });
 
 const setNewSchool = (schoolName, value) => {
-    client.set(schoolName, value, redis.print)
+    client.set(schoolName, value, redis.print);
 };
 
 const getAsync = promisify(client.get).bind(client)

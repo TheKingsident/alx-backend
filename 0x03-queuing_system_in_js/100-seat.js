@@ -45,7 +45,7 @@ app.get('/reserve_seat', (req, res) => {
   });
 
   job.on('failed', (err) => {
-    console.log(`Seat reservation job ${job.id} failed: ${err.message}`)
+    console.log(`Seat reservation job ${job.id} failed: ${err.message}`);
   });
 });
 

@@ -48,7 +48,7 @@ app.get('/list_products/:itemId', async (req, res) => {
   }
 
   const currentStock = await getCurrentReservedStockById(itemId);
-  item.currentQuantity = currentStock !== null ? currentStock : item.stock
+  item.currentQuantity = currentStock !== null ? currentStock : item.stock;
   res.json(item);
 });
 
